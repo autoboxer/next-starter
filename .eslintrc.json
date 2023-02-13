@@ -3,13 +3,14 @@
     "next/core-web-vitals",
     "prettier"
   ],
-  "plugins": [ "prettier" ],
+  "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": [
       "error",
       {
         "printWidth": 100,
-        "singleQuote": true
+        "singleQuote": true,
+        "trailingComma": "none"
       }
     ]
   }
