@@ -38,6 +38,31 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## Commit Messages
+
+Commit messages in this project follow a strict standard using commitlint and enforced by a husky hook. Commits must follow a format of:
+
+```
+type(scope?): subject(#issue number?)
+body
+footer?
+```
+
+for example:
+
+```
+feat: install commitlint and husky(#41)
+
+- installs commitlint
+- installs husky
+- adds commitlint config file based on @commitlint/config-conventional
+- adds husky pre-commit hook to lint commit messages
+```
+
+- [what is commitlint](https://github.com/conventional-changelog/commitlint/#what-is-commitlint)
+- [commitlint rules reference](https://commitlint.js.org/#/reference-rules)
+- [@commitlint/config-conventional rules](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional)
+
 ## Commit with a GUI
 
 Out of the box, the husky pre-commit hooks configured in this project will prevent you from committing code using a GUI like [Tower](https://www.git-tower.com/). Don't fret, it's possible to get this working with very little overhead.
