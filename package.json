@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "check-types": "tsc --project tsconfig.json --pretty --noEmit",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "validate": "npm run check-types && npx lint-staged"
   },
   "dependencies": {
     "@next/font": "13.1.6",
@@ -29,5 +32,14 @@
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "tailwindcss": "^3.2.6"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "prettier --write --ignore-unknown",
+      "eslint --no-ignore --max-warnings=0 --fix"
+    ],
+    "**/*.{json,md,mdx,css,html}": [
+      "prettier --write"
+    ]
   }
 }
