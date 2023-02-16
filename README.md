@@ -38,7 +38,13 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Commit Messages
+## Code Commits
+
+### Committing Code
+
+This repository uses [commitizen](https://www.npmjs.com/package/commitizen) to help enforce rules and simplify the commit process. To commit any staged files, simply run `npm run commit` and follow the on-screen prompts.
+
+### Commit Messages
 
 Commit messages in this project follow a strict standard using commitlint and enforced by a husky hook. Commits must follow a format of:
 
