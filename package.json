@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "check-types": "tsc --project tsconfig.json --pretty --noEmit",
     "validate": "npm run check-types && npx lint-staged",
-    "commit": "cz"
+    "commit": "git-cz"
   },
   "dependencies": {
     "@next/font": "13.1.6",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.3",
     "@commitlint/config-conventional": "^17.4.3",
+    "@commitlint/cz-commitlint": "^17.4.2",
     "autoprefixer": "^10.4.13",
     "commitizen": "^4.3.0",
     "eslint": "8.33.0",
@@ -32,6 +33,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
+    "inquirer": "^8.2.5",
     "lint-staged": "^13.1.2",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
@@ -45,5 +47,10 @@
     "**/*.{json,md,mdx,css,html}": [
       "prettier --write"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   }
 }
